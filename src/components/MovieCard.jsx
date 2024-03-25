@@ -1,5 +1,6 @@
 import React from 'react'
 import StartRating from './StartRating'
+import { Link } from 'react-router-dom'
 
 const MovieCard = ({movie,handleDelete}) => {
     
@@ -10,11 +11,18 @@ const MovieCard = ({movie,handleDelete}) => {
         <p> {movie.rating}</p>
         <p>{movie.date}</p>
         <StartRating rating={movie.rating}/>
+
         <div>
+       
+          
 
             <button className="btn"onClick={()=>handleDelete(movie.id)} >Delete</button>
         </div>
-
+        <Link to={`/info/${movie.id}`}>
+        <button className='btn'>more info </button>
+        </Link>
+        
+        
     </div>
   )
 }

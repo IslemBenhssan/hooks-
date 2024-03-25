@@ -17,8 +17,7 @@ const Startrating = ({rating}) => {
     }
   return (
     <div>{
-        React.Children.toArray
-        (stars(rating))
+        React.Children.toArray(stars(rating))
         }</div>
   )
 }
